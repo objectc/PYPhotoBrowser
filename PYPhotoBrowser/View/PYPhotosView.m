@@ -436,12 +436,12 @@ static NSInteger _photosViewCount;
         maxCol = 2;
     }
     // 当图片为一张时，图片大小和photosView一致
-    if (self.photos.count == 1) {
-        PYPhotoView *photoView = self.subviews[0];
-        photoView.frame = self.bounds;
-        self.contentSize = self.bounds.size;
-        return;
-    }
+//    if (self.photos.count == 1) {
+//        PYPhotoView *photoView = self.subviews[0];
+//        photoView.frame = self.bounds;
+//        self.contentSize = self.bounds.size;
+//        return;
+//    }
     // 调整图片位置
     for (int i = 0; i < photosCount; i++) {
         PYPhotoView *photoView = self.subviews[i];
