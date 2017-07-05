@@ -56,6 +56,10 @@ NSString *const PYPhotoCellReuseIdentifier = @"PYPhotoViewCell";
 
     [self.photoView setPhoto:photo];
     
+    //fixed crash bug when image is nil
+    if (self.photoView.image==nil) {
+        return;
+    }
     // 取出图片大小
     CGSize imageSize = self.photoView.image.size;
     CGFloat width;
